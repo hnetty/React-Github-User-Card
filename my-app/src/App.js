@@ -39,15 +39,16 @@ class App extends React.Component {
   // console.log(this.state.userData)
   console.log(this.state.userFollowers)
   return(
-    <div>
-      <h1>Github Cards</h1>
+    <div className="mainContent">
+      <h1 className="headingContent">Github Cards</h1>
       <div>
-        <p>This is the login - {this.state.userData.login}</p>
-        <p>These are their followers - {this.state.userFollowers.map(position => (
-          <p>{position.login}</p>
+        <h3 className="headingContent">This is the user:</h3>
+        <p className="userCard">{this.state.userData.login}</p>
+        <h3 className="headingContent">These are their followers:</h3> {this.state.userFollowers.map(position => (
+          <p className="userCard">{position.login}</p>
         )
 
-        )}</p>
+        )}
       </div>
     </div>
     
